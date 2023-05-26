@@ -37,6 +37,11 @@ function reset() {
   document.querySelector(".tip-amount").textContent = "$0.00";
   document.querySelector(".total-outcome").textContent = "$0.00";
   document.getElementById("reset").style.backgroundColor = "hsl(183, 80%, 24%)";
+  document.querySelector(".error-message").textContent = "";
+  document.getElementById("people-input").classList.add("input");
+  document
+    .getElementById("people-input")
+    .classList.remove("error-input-border");
 }
 
 //funkcja wywołująca komuniakt o błędzie podczas wpisania zero w number of people
