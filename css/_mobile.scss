@@ -1,0 +1,37 @@
+@media screen and (max-width: 750px) {
+  .custom-button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .custom-button {
+    font-size: 24px;
+  }
+
+  header {
+    margin: 2rem 0 2rem 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tip-selector-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .wrapper {
+    margin: 0;
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

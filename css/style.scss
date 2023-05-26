@@ -1,0 +1,172 @@
+@import "config";
+@import "buttons";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $light-grayish-cyan;
+  font-family: $font;
+  font-size: 24px;
+  color: $dark-grayish-cyan;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  letter-spacing: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.wrapper {
+  background-color: $white;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 1rem;
+  font-size: 12px;
+}
+
+.number-input {
+  width: 100%;
+  height: 3rem;
+  text-align: end;
+  font-family: $font;
+  font-size: 24px;
+  color: $dark-cyan;
+  background-color: $very-light-grayish-cyan;
+  border: none;
+  padding-right: 0.7rem;
+}
+
+// ukrywanie strzałek w polach number
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input:focus {
+  outline: 2px solid $strong-cyan;
+  border-radius: 2px;
+}
+
+.input:hover {
+  outline: 2px solid $strong-cyan;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: $grayish-cyan;
+}
+
+.filled {
+  color: $dark-cyan;
+}
+
+.tip-selector-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+
+.summary {
+  background-color: $dark-cyan;
+  border-radius: 15px;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.reset-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.tip-amount-summary,
+.total-amount-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-primary {
+  padding: 5px 0 10px 0;
+  font-size: 14px;
+}
+
+.text-summary {
+  color: $light-grayish-cyan;
+  font-size: 16px;
+}
+
+.text-secondary {
+  color: $dark-grayish-cyan;
+}
+
+.summary-outcome {
+  font-size: 35px;
+  color: $strong-cyan;
+}
+
+.custom-button {
+  background-color: $very-light-grayish-cyan;
+  color: $dark-grayish-cyan;
+  font-size: 24px;
+  padding: 0;
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.tip-selector {
+  padding: 25px 0 25px 0;
+}
+
+.people-number-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-message {
+  color: $error-red;
+}
+
+.error-input-border {
+  border: 2px solid $error-red;
+  border-radius: 5px;
+}
+
+.input.no-hover:hover {
+  border: none;
+}
+
+@import "mobile";

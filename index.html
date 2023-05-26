@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <p class="splitter">SPLI</p>
+      <p class="splitter">TTER</p>
+    </header>
+    <div class="wrapper">
+      <div class="counting">
+        <div class="bill">
+          <p class="text-primary">Bill</p>
+          <div class="input-container">
+            <img src="images/icon-dollar.svg" class="icon" />
+            <input
+              oninput="countingTipAmount()"
+              type="number"
+              class="number-input input"
+              id="bill-input"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="tip-selector">
+          <p class="text-primary">Select Tip %</p>
+          <div class="tip-selector-buttons">
+            <button
+              onclick="activateButton(1); countingTipAmount()"
+              class="button"
+              id="button-5"
+              value="0.05"
+            >
+              5%
+            </button>
+            <button
+              onclick="activateButton(2); countingTipAmount()"
+              class="button"
+              id="button-10"
+              value="0.1"
+            >
+              10%
+            </button>
+            <button
+              onclick="activateButton(3); countingTipAmount()"
+              class="button"
+              id="button-15"
+              value="0.15"
+            >
+              15%
+            </button>
+            <button
+              onclick="activateButton(4); countingTipAmount()"
+              class="button"
+              id="button-25"
+              value="0.25"
+            >
+              25%
+            </button>
+            <button
+              onclick="activateButton(5); countingTipAmount()"
+              class="button"
+              id="button-50"
+              value="0.5"
+            >
+              50%
+            </button>
+            <input
+              onclick="activateButton(6);"
+              oninput="countingTipAmount()"
+              type="number"
+              class="button custom-button input"
+              id="custom-tip-button"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+        <div class="people-number">
+          <div class="people-number-text">
+            <p class="text-primary">Number of People</p>
+            <p class="text-primary error-message"></p>
+          </div>
+          <div class="input-container">
+            <img src="images/icon-person.svg" class="icon" />
+            <input
+              type="number"
+              class="number-input input"
+              id="people-input"
+              placeholder="0"
+              oninput="checkIfZero(); countingTipAmount()"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="summary">
+        <div class="summary-section">
+          <div class="tip-amount-summary">
+            <div class="tip-total-amount">
+              <p class="text-summary">Tip Amount</p>
+              <p class="text-secondary">/ person</p>
+            </div>
+            <p class="summary-outcome tip-amount">$0.00</p>
+          </div>
+          <div class="total-amount-summary">
+            <div class="tip-total-amount">
+              <p class="text-summary">Total</p>
+              <p class="text-secondary">/ person</p>
+            </div>
+            <p class="summary-outcome total-outcome">$0.00</p>
+          </div>
+        </div>
+        <div class="reset-section">
+          <button onclick="reset()" class="button" id="reset">RESET</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
